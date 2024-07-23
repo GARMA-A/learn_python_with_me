@@ -21,6 +21,7 @@ if input("Do you want To Play a Game BlackJack ? type 'y' or 'n' : ") == 'y':
       if input("Do you want to add a Card ? type 'y' or 'n' : ") =='y':
         myCards.append(random.choice(card_numbers)) 
       else :
+          os.system('cls')
           print(f"computer cards are [{computerTwoCards[0]} and {computerTwoCards[1]}]")
           print("Your cards now is : [ " , end="")
           sum = 0

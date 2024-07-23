@@ -47,7 +47,7 @@ colors = ['black','red' , 'orange' , 'yellow' , 'green' , 'blue']
 y_positions = [-70 , -40 , -10 , 20 , 50 , 80]
 
 all_turtles = []
-user_bet = screen.textinput(title="PLay A Game !" , prompt="Which turtle will win the game")
+user_bet = screen.textinput(title="PLay A Game !" , prompt="Which turtle will win the game:\n[black,red ,orange,yellow,green,blue]")
 
 is_race_on = False
 

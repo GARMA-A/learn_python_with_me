@@ -223,7 +223,7 @@ now you can use this class or method in this file(module) only
 
 """
 you need to know about the standard library 
-study these hard 
+study them hard 
 
 random
 math 
