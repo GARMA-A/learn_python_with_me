@@ -1,3 +1,7 @@
+**/tempCodeRunnerFile.py
+
+**/.vscode
+
 /.vscode
 .vscode/*git
 !.vscode/settings.json

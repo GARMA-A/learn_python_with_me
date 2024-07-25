@@ -1,4 +1,13 @@
-<h1>Section One The main book we are working with</h1>
+# **How To Use** <p>This repo should make you master at python in 100 days<p>
+
+<h3>-Download the book and read capter two and three</h3> 
+<h3>-Read the learn and learnWithWebsites files</h3>
+<h3>-Start with the projects try to implement it to day 11</h3>
+<h3>-Read chapter four</h3>
+<h3>-Start with projects try to implement it to day 20</h3> 
+
+
+
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX9_SPWYSde7MuHUlFOXhKy7GEjn-Ta1W3iyVT_YDWKfiuO7IcaTb8BSDnlCG6HUN0bN4&usqp=CAU" width="300" height="450" />
 
 
@@ -49,7 +58,7 @@ Enhance your Python projects with external libraries:
 - **5.3 Exploring Popular Libraries**: Overview of libraries like NumPy, pandas, and requests.
 For more in-depth learning and reference, check out the book [here](https://drive.google.com/file/d/1PQM8tYsdCcAAaiBmx83EYnhbYyLvetF9/view).
 
-<h1>Section Two a Great Projects</h1>
+# **The Projects**
 
 - **Day 2: Calculator** - A basic calculator application to perform arithmetic operations.
 - **Day 3: Tips Calculator** - An app to calculate tips and split bills.

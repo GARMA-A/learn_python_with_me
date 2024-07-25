@@ -1,0 +1,1 @@
+this will write into the file and remove any thing elsethis will write into the file and remove any thing else
