@@ -428,7 +428,6 @@ else:
 
 
 """
-
 #⚫⚫⚫⚫Exceptions⚫⚫⚫⚫
 """
 try:
@@ -474,8 +473,27 @@ except ValueError as e:
 
 """
 
+# python -m pip uninstall colorgram.py
 
+
+
+
+
+
+seg = [1,2,3,4,5,6]
+
+for i in range(5,-1,-1):  # 0 , 1 ,  2 , 3 , 4 , 5 
+    print(seg[i])
+
+    
+        
+
+
+
+    
  
+    
+
     
 
 
