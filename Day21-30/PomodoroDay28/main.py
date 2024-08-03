@@ -5,9 +5,9 @@ RED = "#e7305b"
 GREEN = "#9bdeac"
 YELLOW = "#f7f5dd"
 FONT_NAME = "Courier"
-WORK_MIN = 55
-SHORT_BREAK_MIN = 20
-LONG_BREAK_MIN = 40
+WORK_MIN = 25
+SHORT_BREAK_MIN = 5
+LONG_BREAK_MIN = 15
 reps=0
 check_mark = ""
 timer = None
@@ -79,7 +79,7 @@ window.config(padx=100,pady=50 ,bg=YELLOW,highlightthickness=0,border=0)
 
 
 canvas = Canvas(width=200 , height=224 , bg=YELLOW)
-tomato_img = PhotoImage(file="tomato.png")
+tomato_img = PhotoImage(file="PomodoroDay28/tomato.png")
 canvas.create_image(102,112,image=tomato_img)
 timer_txt = canvas.create_text(103,130,text="00:00" , fill="white" , font=(FONT_NAME,35,"bold"))
 canvas.grid(row=1,column=1)
