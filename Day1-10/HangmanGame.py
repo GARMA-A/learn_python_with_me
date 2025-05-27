@@ -1,20 +1,84 @@
 import random
 import os
+
 word_list = [
-    "apple", "banana", "carrot", "elephant", "giraffe",
-    "hamster", "jacket", "kangaroo", "lemon", "mango",
-    "nutmeg", "orange", "peanut", "quinoa", "rabbit",
-    "strawberry", "tomato", "umbrella", "violet", "watermelon",
-    "xylophone", "yogurt", "zebra", "antler", "ballerina",
-    "cabbage", "dolphin", "eggplant", "firefly", "garden",
-    "honey", "insect", "jackal", "kettle", "leopard",
-    "marmot", "nectar", "ostrich", "penguin", "quail",
-    "raccoon", "sunflower", "tulip", "unicorn", "violet",
-    "waterfall", "xylophone", "yogurt", "zeppelin"
+    "apple",
+    "banana",
+    "carrot",
+    "elephant",
+    "giraffe",
+    "hamster",
+    "jacket",
+    "kangaroo",
+    "lemon",
+    "mango",
+    "nutmeg",
+    "orange",
+    "peanut",
+    "quinoa",
+    "rabbit",
+    "strawberry",
+    "tomato",
+    "umbrella",
+    "violet",
+    "watermelon",
+    "xylophone",
+    "yogurt",
+    "zebra",
+    "antler",
+    "ballerina",
+    "cabbage",
+    "dolphin",
+    "eggplant",
+    "firefly",
+    "garden",
+    "honey",
+    "insect",
+    "jackal",
+    "kettle",
+    "leopard",
+    "marmot",
+    "nectar",
+    "ostrich",
+    "penguin",
+    "quail",
+    "raccoon",
+    "sunflower",
+    "tulip",
+    "unicorn",
+    "violet",
+    "waterfall",
+    "xylophone",
+    "yogurt",
+    "zeppelin",
+    "avocado",
+    "blueberry",
+    "coconut",
+    "dragonfruit",
+    "elderberry",
+    "fig",
+    "grapefruit",
+    "hazelnut",
+    "iceberg",
+    "jalapeno",
+    "kiwifruit",
+    "lychee",
+    "mulberry",
+    "nectarine",
+    "olive",
+    "papaya",
+    "raspberry",
+    "spinach",
+    "turnip",
+    "ugli",
+    "vanilla",
+    "walnut",
+    "yam",
+    "zucchini",
 ]
 
 stages = [
-'''
+    """
   +---+
   |   |
   O   |
@@ -22,10 +86,8 @@ stages = [
  / \  |
       |
 =========
-'''
-,
-
-'''
+""",
+    """
   +---+
   |   |
   O   |
@@ -33,10 +95,8 @@ stages = [
  /    |
       |
 =========
-'''
-, 
-
-'''
+""",
+    """
   +---+
   |   |
   O   |
@@ -44,10 +104,8 @@ stages = [
       |
       |
 =========
-'''
-,
-
- '''
+""",
+    """
   +---+
   |   |
   O   |
@@ -55,10 +113,8 @@ stages = [
       |
       |
 =========
-'''
-,
-
- '''
+""",
+    """
   +---+
   |   |
   O   |
@@ -66,7 +122,8 @@ stages = [
       |
       |
 =========
-''', '''
+""",
+    """
   +---+
   |   |
   O   |
@@ -74,9 +131,8 @@ stages = [
       |
       |
 =========
-''',
-
- '''
+""",
+    """
   +---+
   |   |
       |
@@ -84,7 +140,8 @@ stages = [
       |
       |
 =========
-''']
+""",
+]
 
 print("-------------------------------")
 print("\n")
@@ -92,71 +149,59 @@ print("\n")
 tryAgain = True
 
 while tryAgain:
- os.system('cls')
+    os.system("clear")
 
- chosen_word = word_list[random.randint(0,49)]
- display = ['-'] * len(chosen_word) 
+    chosen_word = word_list[random.randint(0, 49)]
+    display = ["-"] * len(chosen_word)
 
- stageIndex = len(stages)
+    stageIndex = len(stages)
 
- print('[ ' ,end="")
- for item in  display :
-       print("' "+item+" '"+" " , end="")
- print('] ')
+    print("[ ", end="")
+    for item in display:
+        print("' " + item + " '" + " ", end="")
+    print("] ")
 
- inProgress = True
- faildGuesses = 0
+    inProgress = True
+    faildGuesses = 0
 
+    isTheWordComplete = True
 
+    while inProgress:
 
+        oneFaildGuess = True
+        guess = input("guess a letter: ").lower()
+        os.system("cls")
 
- while(inProgress):
-       isTheWordComplete = True
-       oneFaildGuess = True
-       guess =input("guess a letter: ").lower()
-       os.system('cls')
-      
-       print("-------------------------------")
-       print("\n")
-       print("\n")
-       for index in range(len(chosen_word)) :
-          if chosen_word[index] == guess:
-               oneFaildGuess=False
-               display[index] = guess
+        print("-------------------------------")
+        print("\n")
+        print("\n")
+        for index in range(len(chosen_word)):
+            if chosen_word[index] == guess:
+                oneFaildGuess = False
+                display[index] = guess
 
-       if oneFaildGuess == True:
-            faildGuesses+=1
-            stageIndex-=1
+        if oneFaildGuess == True:
+            faildGuesses += 1
+            stageIndex -= 1
 
-       if(not(stageIndex==len(stages))):
+        if not (stageIndex == len(stages)):
             print(stages[stageIndex])
 
-       print('[ ' ,end="")
+        print("[ ", end="")
 
-       for item in  display :
-         if(item=='-'):
-              isTheWordComplete= False
-         print("' "+item+" '"+" " , end="")
+        for item in display:
+            if item == "-":
+                isTheWordComplete = False
+            print("' " + item + " '" + " ", end="")
 
+        print("] ", end="\n")
 
-       print('] ' ,end="\n")
+        if faildGuesses >= 7 or isTheWordComplete:
+            inProgress = False
 
-       if(faildGuesses>=7 or isTheWordComplete ):
-            inProgress= False
-      
-    
-
- if(isTheWordComplete):
-      print("You Save The Man🎉")
- else : 
-  print("The man died!💀")
-  print(f"The word was '{chosen_word}'\n ")  
-  tryAgain = input("play Again ! type 'yes' or 'no' :").lower()=='yes'
-  
-               
-         
-       
-
-
-
-
+    if isTheWordComplete:
+        print("You Save The Man🎉")
+    else:
+        print("The man died!💀")
+        print(f"The word was '{chosen_word}'\n ")
+        tryAgain = input("play Again ! type 'yes' or 'no' :").lower() == "yes"

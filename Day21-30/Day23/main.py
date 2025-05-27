@@ -10,7 +10,7 @@ my_screen.tracer(0)
 my_player = Player()
 my_cars = Car_manager()
 my_message = Messages()
-
+      
 
 my_screen.bgcolor("black")
 my_screen.setup(width=900, height=600)

@@ -14,7 +14,6 @@ class Messages(Turtle):
               self.create_play_again()
               
        
-       
        def create_score_msg(self):
               self.score_msg = Turtle()
               self.score_msg.goto(x=-400 , y=250)
